@@ -33,6 +33,7 @@ header {
   width: 100%;
   height: 7.5rem;
   background-color: #212121;
+  z-index: 99;
 }
 header > .container {
   width: 100%;
@@ -114,6 +115,7 @@ header > .container nav ul li:hover {
 }
 header > .container nav ul li a {
   color: #fff;
+  padding-inline: 4.375rem;
 }
 header > .container nav.active ul {
   transform: translateX(0);
@@ -136,6 +138,9 @@ header > .container nav.active ul li {
   align-items: center;
 }
 header > .container nav.active ul li:hover {
+  background-color: #A7734A;
+}
+header > .container nav.active ul li.selected {
   background-color: #A7734A;
 }
 header > .container nav.active ul li a {
@@ -340,6 +345,9 @@ header > .container nav.active button span:nth-child(3) {
   width: 100%;
   height: 100vh;
   color: #fff;
+}
+#app main section {
+  padding-top: 7.5rem;
 }
 
 /*# sourceMappingURL=global.css.map */
