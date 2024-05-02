@@ -1,0 +1,15 @@
+{
+  "name": "portfolio-marcelo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass":"sass assets/styles/global.scss build/global.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.76.0"
+  }
+}
