@@ -1,10 +1,7 @@
-// capturar elementos
+// Funcionalidade do botão menu hamburguer
 const menuBurguer = document.querySelector('#btn-burguer');
 const nav = document.querySelector('#nav');
-// criar a função
-function menuToggle(){
+
+menuBurguer.addEventListener('click', () =>{
     nav.classList.toggle('active');
-}
-// criar evento
-menuBurguer.addEventListener('click', menuToggle);
-// adicionar evento ao elemento 
+});
