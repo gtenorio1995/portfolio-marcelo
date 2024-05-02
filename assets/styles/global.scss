@@ -1,0 +1,30 @@
+// Imports config
+@use './config/reset';
+@use './config/colors';
+@use 'sass:math';
+
+// Imports components
+@use './components/header';
+
+// Functions
+@function converter($px) {
+    @return math.div($px, 16) * 1rem;
+}
+
+// Mixins
+@mixin f-center($j-content, $a-items) {
+    display: flex;
+    justify-content: $j-content;
+    align-items: $a-items;
+}
+
+@mixin text($f-size, $f-weight){
+    font-size: converter($f-size);
+    font-weight: $f-weight;
+} 
+
+// App
+#app{
+    width: 100%;
+    height: 100vh;
+}
