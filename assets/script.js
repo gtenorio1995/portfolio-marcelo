@@ -14,6 +14,7 @@ function selectedLink(){
         item.classList.remove('selected')
     })
     this.classList.add('selected')
+    nav.classList.toggle('active')
 }
 
 links.forEach((item)=>{
