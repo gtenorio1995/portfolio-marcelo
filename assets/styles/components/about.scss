@@ -21,36 +21,43 @@
 
 // ---------------------------------------------------------------------------\\
 
-#expert{
-    background-color: colors.$primary;
+#about{
+    width: 100%;
+    background-color: colors.$second-darken;
 
-    .container{
-        width: 100%;
+    >.container{
+        @include f-center(center, center);
+        flex-direction: column;
 
         img{
             width: 100%;
         }
 
         .content{
+            @include f-center(center, center);
+            flex-direction: column;
             padding: converter(16);
-            width: 100%;
 
-            h2{
-                text-align: star;
-                @include text(24, 400);
+            h2,
+            .title-section{
+                text-align: end;
+                width: 100%;
             }
 
-            h1{
-                text-align: start;
-                @include text(32, 700);
+            h2{
+                @include text(20, 700);
+            }
+
+            .title-section{
+                @include text(24, 400);
                 padding: converter(16) 0;
             }
 
-            p{
+            >p{
                 text-align: justify;
             }
 
-            .hero{
+            .hero-about{
                 padding: converter(16) 0;
                 @include f-center(space-between, center);
                 width: 100%;
@@ -65,58 +72,32 @@
                     background-color: colors.$detail;
                     border-top-right-radius: 50%;
                     border-bottom-left-radius: 50%;
-                }
-
-                .contract{
-                    z-index: 1;
-                    @include f-center(center, center);
-                    text-align: end;
-                    width: 50%;
-                    @include text(18, 600);
-                }
-
-                .seta{
-                    width: 50%;
-                    position: absolute;
-                    bottom: -20px;
-                    right: 50px;
-                    text-align: end;
-                    font-size: converter(70);
-                    color: colors.$detail;
-                }
-            }
-
-            .contact-expert{
-                position: relative;
-                @include f-center(center, center);
-                flex-direction: column;
-
-                .seta{
-                    width: 50%;
-                    position: absolute;
                     right: 0;
-                    top: -80px;
-                    text-align: end;
-                    font-size: converter(70);
-                    color: colors.$detail;
                 }
 
-                div{
-                    width: 100%;
+                .download{
+                    z-index: 1;
+                    @include f-center(end, center);
+                    text-align: end;
+                    width: 90%;
+                    
+                    a{
+                        @include text(18, 600);
 
-                    h3{
-                        margin: converter(20) 0 converter(8);
-                        text-align: center;
+                        &:hover{
+                            color: colors.$white;
+                        }
                     }
+                }
 
-                    .email{
-                        @include f-center(center, center);;
-                        text-align: center;
-                    }
-
-                    ul{
-                        @include f-center(space-around, center);
-                    }
+                .seta{
+                    width: 50%;
+                    position: absolute;
+                    top: -30px;
+                    left: 30px;
+                    text-align: start;
+                    font-size: converter(70);
+                    color: colors.$detail;
                 }
             }
         }

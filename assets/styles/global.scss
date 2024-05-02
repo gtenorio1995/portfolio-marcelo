@@ -6,6 +6,7 @@
 // Imports components
 @use './components/header';
 @use './components/expert';
+@use './components/about';
 
 // Functions
 @function converter($px) {

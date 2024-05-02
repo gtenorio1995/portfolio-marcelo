@@ -24,12 +24,17 @@ a:hover {
   color: #A7734A;
 }
 
+p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 header {
   width: 100%;
   height: 7.5rem;
   background-color: #212121;
 }
-header .container {
+header > .container {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -37,22 +42,22 @@ header .container {
   padding: 1rem;
   position: relative;
 }
-header .container .brand {
+header > .container .brand {
   width: 3.5rem;
 }
-header .container .brand img {
+header > .container .brand img {
   width: 100%;
 }
-header .container .brand span {
+header > .container .brand span {
   font-family: "Pinyon Script", cursive;
   font-size: 1rem;
   font-weight: 400;
   color: #A7734A;
 }
-header .container nav {
+header > .container nav {
   transition: 0.6s ease-in-out;
 }
-header .container nav button {
+header > .container nav button {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,27 +68,27 @@ header .container nav button {
   padding: 0.3125rem;
   border: none;
 }
-header .container nav button span {
+header > .container nav button span {
   width: 100%;
   height: 0.25rem;
   transition: all 0.6s;
 }
-header .container nav button span:nth-child(1) {
+header > .container nav button span:nth-child(1) {
   background: #fff;
   border-bottom-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
-header .container nav button span:nth-child(2) {
+header > .container nav button span:nth-child(2) {
   background: #A7734A;
   border-top-left-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
 }
-header .container nav button span:nth-child(3) {
+header > .container nav button span:nth-child(3) {
   background: #fff;
   border-bottom-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
-header .container nav ul {
+header > .container nav ul {
   transform: translateX(100%);
   position: absolute;
   right: 0;
@@ -96,7 +101,7 @@ header .container nav ul {
   flex-direction: column;
   transition: transform 0.6s ease-in-out;
 }
-header .container nav ul li {
+header > .container nav ul li {
   background-color: #212121;
   width: 100%;
   height: 100%;
@@ -104,13 +109,13 @@ header .container nav ul li {
   justify-content: center;
   align-items: center;
 }
-header .container nav ul li:hover {
+header > .container nav ul li:hover {
   background-color: #A7734A;
 }
-header .container nav ul li a {
+header > .container nav ul li a {
   color: #fff;
 }
-header .container nav.active ul {
+header > .container nav.active ul {
   transform: translateX(0);
   right: 0;
   top: 7.5rem;
@@ -122,7 +127,7 @@ header .container nav.active ul {
   flex-direction: column;
   transition: transform 0.6s ease-in-out;
 }
-header .container nav.active ul li {
+header > .container nav.active ul li {
   background-color: #212121;
   width: 100%;
   height: 100%;
@@ -130,55 +135,55 @@ header .container nav.active ul li {
   justify-content: center;
   align-items: center;
 }
-header .container nav.active ul li:hover {
+header > .container nav.active ul li:hover {
   background-color: #A7734A;
 }
-header .container nav.active ul li a {
+header > .container nav.active ul li a {
   color: #fff;
 }
-header .container nav.active button span {
+header > .container nav.active button span {
   transition: all 0.6s;
 }
-header .container nav.active button span:nth-child(2) {
+header > .container nav.active button span:nth-child(2) {
   width: 0;
   opacity: 0;
 }
-header .container nav.active button span:nth-child(1) {
+header > .container nav.active button span:nth-child(1) {
   transform: rotate(135deg) translate(15px, -1px);
   background: #A7734A;
 }
-header .container nav.active button span:nth-child(3) {
+header > .container nav.active button span:nth-child(3) {
   transform: rotate(-135deg) translate(13px, -2px);
 }
 
 #expert {
   background-color: #212121;
 }
-#expert div {
+#expert .container {
   width: 100%;
 }
-#expert div img {
+#expert .container img {
   width: 100%;
 }
-#expert div .container {
+#expert .container .content {
   padding: 1rem;
   width: 100%;
 }
-#expert div .container h2 {
+#expert .container .content h2 {
   text-align: star;
   font-size: 1.5rem;
   font-weight: 400;
 }
-#expert div .container h1 {
+#expert .container .content h1 {
   text-align: start;
   font-size: 2rem;
   font-weight: 700;
   padding: 1rem 0;
 }
-#expert div .container p {
+#expert .container .content p {
   text-align: justify;
 }
-#expert div .container .hero {
+#expert .container .content .hero {
   padding: 1rem 0;
   display: flex;
   justify-content: space-between;
@@ -187,7 +192,7 @@ header .container nav.active button span:nth-child(3) {
   margin: 2rem 0;
   position: relative;
 }
-#expert div .container .hero .amendoa {
+#expert .container .content .hero .amendoa {
   width: 4.375rem;
   height: 4.375rem;
   position: absolute;
@@ -196,15 +201,17 @@ header .container nav.active button span:nth-child(3) {
   border-top-right-radius: 50%;
   border-bottom-left-radius: 50%;
 }
-#expert div .container .hero .contract {
+#expert .container .content .hero .contract {
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: end;
   width: 50%;
+  font-size: 1.125rem;
+  font-weight: 600;
 }
-#expert div .container .hero .seta {
+#expert .container .content .hero .seta {
   width: 50%;
   position: absolute;
   bottom: -20px;
@@ -213,14 +220,14 @@ header .container nav.active button span:nth-child(3) {
   font-size: 4.375rem;
   color: #A7734A;
 }
-#expert div .container .contact-expert {
+#expert .container .content .contact-expert {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-#expert div .container .contact-expert .seta {
+#expert .container .content .contact-expert .seta {
   width: 50%;
   position: absolute;
   right: 0;
@@ -229,23 +236,104 @@ header .container nav.active button span:nth-child(3) {
   font-size: 4.375rem;
   color: #A7734A;
 }
-#expert div .container .contact-expert div {
+#expert .container .content .contact-expert div {
   width: 100%;
 }
-#expert div .container .contact-expert div h3 {
+#expert .container .content .contact-expert div h3 {
   margin: 1.25rem 0 0.5rem;
   text-align: center;
 }
-#expert div .container .contact-expert div .email {
+#expert .container .content .contact-expert div .email {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-#expert div .container .contact-expert div ul {
+#expert .container .content .contact-expert div ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+#about {
+  width: 100%;
+  background-color: #191919;
+}
+#about > .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#about > .container img {
+  width: 100%;
+}
+#about > .container .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+#about > .container .content h2,
+#about > .container .content .title-section {
+  text-align: end;
+  width: 100%;
+}
+#about > .container .content h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+#about > .container .content .title-section {
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 1rem 0;
+}
+#about > .container .content > p {
+  text-align: justify;
+}
+#about > .container .content .hero-about {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 2rem 0;
+  position: relative;
+}
+#about > .container .content .hero-about .amendoa {
+  width: 4.375rem;
+  height: 4.375rem;
+  position: absolute;
+  display: block;
+  background-color: #A7734A;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  right: 0;
+}
+#about > .container .content .hero-about .download {
+  z-index: 1;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  text-align: end;
+  width: 90%;
+}
+#about > .container .content .hero-about .download a {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+#about > .container .content .hero-about .download a:hover {
+  color: #fff;
+}
+#about > .container .content .hero-about .seta {
+  width: 50%;
+  position: absolute;
+  top: -30px;
+  left: 30px;
+  text-align: start;
+  font-size: 4.375rem;
+  color: #A7734A;
 }
 
 #app {

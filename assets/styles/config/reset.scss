@@ -1,5 +1,17 @@
 // Imports
 @use './colors';
+@use 'sass:math';
+
+// Functions
+@function converter($px) {
+    @return math.div($px, 16) * 1rem;
+}
+
+// Mixins
+@mixin text($f-size, $f-weight) {
+    font-size: converter($f-size);
+    font-weight: $f-weight;
+}
 
 *{
     margin: 0;
@@ -26,4 +38,8 @@ a{
     &:hover{
         color: colors.$detail;
     }
+}
+
+p{
+    @include text(16, 400);
 }
