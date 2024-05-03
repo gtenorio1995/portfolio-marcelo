@@ -8,6 +8,7 @@
 @use './components/expert';
 @use './components/about';
 @use './components/works';
+@use './components/reviews';
 
 // Functions
 @function converter($px) {

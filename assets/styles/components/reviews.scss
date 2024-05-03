@@ -1,0 +1,87 @@
+// Imports config
+@use '../config/colors';
+@use 'sass:math';
+
+// Functions
+@function converter($px) {
+    @return math.div($px, 16) * 1rem;
+}
+
+// Mixins
+@mixin f-center($j-content, $a-items) {
+    display: flex;
+    justify-content: $j-content;
+    align-items: $a-items;
+}
+
+@mixin text($f-size, $f-weight) {
+    font-size: converter($f-size);
+    font-weight: $f-weight;
+}
+
+// ---------------------------------------------------------------------------\\
+
+#reviews{
+    background-color: colors.$primary-darken;
+
+    .container{
+        padding: converter(16);
+        width: 100%;
+
+        h2{
+            @include text(24, 400);
+            margin-bottom: converter(16);
+        }
+
+        .cards{
+            @include f-center(center, center);
+            flex-direction: column;
+            row-gap: converter(32);
+            width: 100%;
+
+            .card{
+                @include f-center(center, center);
+                flex-direction: column;
+                width: 100%;
+                border-radius: converter(16);
+                box-shadow: 0 4px 0 0 colors.$detail;
+                padding: converter(16);
+
+                p{
+                    text-align: justify;
+                    @include text(16, 400);
+                }
+
+                .hero-review{
+                    width: 100%;
+                    @include f-center(space-around, center);
+                    img{
+                        width: 120px;
+                        height: 120px;
+                        border-radius: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                        margin: converter(16) 0;
+                    }
+    
+                    .user{
+                        @include f-center(center, center);
+                        flex-direction: column;
+    
+                        .user-review{
+                            @include text(16, 700);
+                            text-align: center;
+                        }
+
+                        .cargo-user{
+                            @include text(16, 400);
+                            text-align: center;
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+}
