@@ -21,43 +21,43 @@
 
 // ---------------------------------------------------------------------------\\
 
-#expert{
+#expert {
     background-color: colors.$primary;
 
-    .container{
+    .container {
         width: 100%;
 
-        img{
+        img {
             width: 100%;
         }
 
-        .content{
+        .content {
             padding: converter(16);
             width: 100%;
 
-            h2{
+            h2 {
                 text-align: star;
                 @include text(24, 400);
             }
 
-            h1{
+            h1 {
                 text-align: start;
                 @include text(32, 700);
                 padding: converter(16) 0;
             }
 
-            p{
+            p {
                 text-align: justify;
             }
 
-            .hero{
+            .hero {
                 padding: converter(16) 0;
                 @include f-center(space-between, center);
                 width: 100%;
                 margin: converter(32) 0;
                 position: relative;
 
-                .amendoa{
+                .amendoa {
                     width: converter(70);
                     height: converter(70);
                     position: absolute;
@@ -67,7 +67,7 @@
                     border-bottom-left-radius: 50%;
                 }
 
-                .contract{
+                .contract {
                     z-index: 1;
                     @include f-center(center, center);
                     text-align: end;
@@ -75,7 +75,7 @@
                     @include text(18, 600);
                 }
 
-                .seta{
+                .seta {
                     width: 50%;
                     position: absolute;
                     bottom: -20px;
@@ -86,12 +86,12 @@
                 }
             }
 
-            .contact-expert{
+            .contact-expert {
                 position: relative;
                 @include f-center(center, center);
                 flex-direction: column;
 
-                .seta{
+                .seta {
                     width: 50%;
                     position: absolute;
                     right: 0;
@@ -101,21 +101,45 @@
                     color: colors.$detail;
                 }
 
-                div{
+                div {
                     width: 100%;
 
-                    h3{
+                    h3 {
                         margin: converter(20) 0 converter(8);
                         text-align: center;
                     }
 
-                    .email{
-                        @include f-center(center, center);;
+                    .email {
+                        @include f-center(center, center);
+                        ;
                         text-align: center;
                     }
 
-                    ul{
+                    ul {
                         @include f-center(space-around, center);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ------------------------------MEDIA QUERIES--------------------------------\\
+@media screen and (min-width: 768px) {
+    #expert {
+        .container {
+            .content {
+                .hero {
+                    .amendoa {
+                        top: converter(-5);
+                    }
+
+                    .contract {
+                        width: 25%;
+                    }
+
+                    div {
+                        margin-bottom: converter(24);
                     }
                 }
             }

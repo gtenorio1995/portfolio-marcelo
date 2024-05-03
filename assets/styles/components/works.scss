@@ -86,3 +86,24 @@
         }
     }
 }
+
+// -------------------------------MEDIA QUERIES-------------------------------\\
+@media screen and (min-width:768px) {
+    #works {
+        .container {
+            .cards {
+                flex-direction: row;
+                flex-wrap: wrap;
+                column-gap: converter(24);
+
+                .card {
+                    width: 45%;
+                }
+            }
+
+            .hero-works {
+                @include f-center(center, center);
+            }
+        }
+    }
+}

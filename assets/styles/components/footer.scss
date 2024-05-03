@@ -1,0 +1,44 @@
+// Imports config
+@use '../config/colors';
+@use 'sass:math';
+
+// Functions
+@function converter($px) {
+    @return math.div($px, 16) * 1rem;
+}
+
+// Mixins
+@mixin f-center($j-content, $a-items) {
+    display: flex;
+    justify-content: $j-content;
+    align-items: $a-items;
+}
+
+@mixin text($f-size, $f-weight) {
+    font-size: converter($f-size);
+    font-weight: $f-weight;
+}
+
+// ---------------------------------------------------------------------------\\
+
+footer{
+    background-color: colors.$black;
+    @include f-center(center, center);
+    flex-direction: column;
+    row-gap: converter(8);
+    padding: converter(32) converter(16);
+
+    .copy,
+    .year{
+        text-align: center;
+    }
+
+    .copy{
+        @include text(16, 400);
+    }
+
+    .year{
+        color: colors.$detail;
+        @include text(20, 700);
+    }
+}

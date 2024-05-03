@@ -21,50 +21,50 @@
 
 // ---------------------------------------------------------------------------\\
 
-#about{
+#about {
     width: 100%;
     background-color: colors.$second-darken;
 
-    >.container{
+    >.container {
         @include f-center(center, center);
         flex-direction: column;
 
-        img{
+        img {
             width: 100%;
         }
 
-        .content{
+        .content {
             @include f-center(center, center);
             flex-direction: column;
             padding: converter(16);
 
             h2,
-            .title-section{
+            .title-section {
                 text-align: end;
                 width: 100%;
             }
 
-            h2{
+            h2 {
                 @include text(20, 700);
             }
 
-            .title-section{
+            .title-section {
                 @include text(24, 400);
                 padding: converter(16) 0;
             }
 
-            >p{
+            >p {
                 text-align: justify;
             }
 
-            .hero-about{
+            .hero-about {
                 padding: converter(16) 0;
                 @include f-center(space-between, center);
                 width: 100%;
                 margin: converter(32) 0;
                 position: relative;
 
-                .amendoa{
+                .amendoa {
                     width: converter(70);
                     height: converter(70);
                     position: absolute;
@@ -75,22 +75,22 @@
                     right: 0;
                 }
 
-                .download{
+                .download {
                     z-index: 1;
                     @include f-center(end, center);
                     text-align: end;
                     width: 90%;
-                    
-                    a{
+
+                    a {
                         @include text(18, 600);
 
-                        &:hover{
+                        &:hover {
                             color: colors.$white;
                         }
                     }
                 }
 
-                .seta{
+                .seta {
                     width: 50%;
                     position: absolute;
                     top: -30px;
@@ -98,6 +98,21 @@
                     text-align: start;
                     font-size: converter(70);
                     color: colors.$detail;
+                }
+            }
+        }
+    }
+}
+
+// ----------------------------MEDIA QUERIES----------------------------------\\
+@media screen and (min-width: 768px) {
+    #about {
+        >.container {
+            .content {
+                .hero-about {
+                    .download {
+                        width: 95%;
+                    }
                 }
             }
         }

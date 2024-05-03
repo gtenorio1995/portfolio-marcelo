@@ -1,0 +1,56 @@
+// Imports config
+@use '../config/colors';
+@use 'sass:math';
+
+// Functions
+@function converter($px) {
+    @return math.div($px, 16) * 1rem;
+}
+
+// Mixins
+@mixin f-center($j-content, $a-items) {
+    display: flex;
+    justify-content: $j-content;
+    align-items: $a-items;
+}
+
+@mixin text($f-size, $f-weight) {
+    font-size: converter($f-size);
+    font-weight: $f-weight;
+}
+
+// ---------------------------------------------------------------------------\\
+
+#contact {
+    background-color: colors.$second-darken;
+    width: 100%;
+
+    .container {
+        padding: converter(16);
+        @include f-center(center, start);
+        flex-direction: column;
+
+        h2 {
+            @include text(24, 400);
+            text-align: start;
+        }
+
+        .brand {
+            margin: converter(16) 0;
+
+            img {
+                width: converter(56);
+            }
+        }
+
+        p {
+            text-align: justify;
+            @include text(16, 400);
+            margin-bottom: converter(16);
+        }
+
+        span {
+            margin-bottom: converter(16);
+        }
+    }
+}

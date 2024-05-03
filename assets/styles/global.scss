@@ -9,6 +9,8 @@
 @use './components/about';
 @use './components/works';
 @use './components/reviews';
+@use './components/contact';
+@use './components/footer';
 
 // Functions
 @function converter($px) {
@@ -37,6 +39,17 @@
     main{
         section{
             padding-top: converter(120);
+        }
+    }
+}
+
+// -------------------------------MEDIA QUERIES-------------------------------\\
+@media screen and (min-width: 768px) {
+    #app{
+        main{
+            #contact{
+                padding-top: converter(16);
+            }
         }
     }
 }
