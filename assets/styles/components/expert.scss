@@ -146,3 +146,120 @@
         }
     }
 }
+
+@media screen and (min-width: 1023px){
+    #app {
+        main {
+            #div1 {
+                background-color: colors.$primary;
+                #expert {
+                    max-width: 1280px;
+                    width: 100%;
+                    margin: 0 auto;
+
+                    .container {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                
+                        img {
+                            width: 100%;
+                            width: 580px;
+                        }
+                
+                        .content {
+                            padding: converter(16);
+                            width: 100%;
+                
+                            h2 {
+                                text-align: star;
+                                @include text(24, 400);
+                            }
+                
+                            h1 {
+                                text-align: start;
+                                @include text(32, 700);
+                                padding: converter(16) 0;
+                            }
+                
+                            p {
+                                text-align: justify;
+                            }
+                
+                            .hero {
+                                padding: converter(16) 0;
+                                @include f-center(space-between, center);
+                                width: 100%;
+                                margin: converter(32) 0;
+                                position: relative;
+                
+                                .amendoa {
+                                    width: converter(70);
+                                    height: converter(70);
+                                    position: absolute;
+                                    display: block;
+                                    background-color: colors.$detail;
+                                    border-top-right-radius: 50%;
+                                    border-bottom-left-radius: 50%;
+                                }
+                
+                                .contract {
+                                    z-index: 1;
+                                    @include f-center(center, center);
+                                    text-align: end;
+                                    width: 30%;
+                                    @include text(18, 600);
+                                }
+                
+                                .seta {
+                                    width: 50%;
+                                    position: absolute;
+                                    bottom: -20px;
+                                    right: 50px;
+                                    text-align: end;
+                                    font-size: converter(70);
+                                    color: colors.$detail;
+                                }
+                            }
+                
+                            .contact-expert {
+                                position: relative;
+                                @include f-center(center, center);
+                                flex-direction: column;
+                
+                                .seta {
+                                    width: 50%;
+                                    position: absolute;
+                                    right: 0;
+                                    top: -80px;
+                                    text-align: end;
+                                    font-size: converter(70);
+                                    color: colors.$detail;
+                                }
+                
+                                div {
+                                    width: 100%;
+                
+                                    h3 {
+                                        margin: converter(20) 0 converter(8);
+                                        text-align: center;
+                                    }
+                
+                                    .email {
+                                        @include f-center(center, center);
+                                        ;
+                                        text-align: center;
+                                    }
+                
+                                    ul {
+                                        @include f-center(space-around, center);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

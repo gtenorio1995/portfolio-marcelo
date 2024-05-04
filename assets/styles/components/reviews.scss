@@ -85,3 +85,20 @@
         }
     }
 }
+
+// -----------------------------MEDIA QUERIES---------------------------------//
+
+@media screen and (min-width: 1023px) {
+    #app {
+        main {
+            #div4 {
+                background-color: colors.$primary-darken;
+                #reviews {
+                    max-width: 1280px;
+                    width: 100%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

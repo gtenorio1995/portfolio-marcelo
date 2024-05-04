@@ -107,3 +107,34 @@
         }
     }
 }
+
+@media screen and (min-width: 1023px) {
+    #app {
+        main {
+            #div3 {
+                background-color: colors.$primary;
+                #works {
+                    max-width: 1280px;
+                    width: 100%;
+                    margin: 0 auto; 
+
+                    .container {
+                        .cards {
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            column-gap: converter(24);
+            
+                            .card {
+                                width: 30%;
+                            }
+                        }
+            
+                        .hero-works {
+                            @include f-center(center, center);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

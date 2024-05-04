@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  outline: none;
 }
 
 html,
@@ -10,6 +11,7 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   transition: 0.4s;
+  position: relative;
 }
 
 li {
@@ -114,6 +116,7 @@ header > .container nav ul li:hover {
   background-color: #A7734A;
 }
 header > .container nav ul li a {
+  text-align: center;
   color: #fff;
   padding-inline: 4.375rem;
 }
@@ -162,23 +165,36 @@ header > .container nav.active button span:nth-child(3) {
 }
 
 @media screen and (min-width: 1023px) {
+  header {
+    background-color: #212121;
+  }
   header > .container {
     padding: 1rem 3rem;
+    position: relative;
+    height: 120px;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  header > .container nav {
+    width: 50%;
   }
   header > .container nav button {
     display: none;
   }
   header > .container nav ul {
     transform: translateX(0%);
-    position: static;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    position: relative;
+    width: 100%;
+    top: 0;
+    display: inline-flex;
     flex-direction: row;
-    display: block;
+    height: auto;
+    gap: 2rem;
+    padding: 0 1rem;
   }
   header > .container nav ul li {
-    background-color: #212121;
+    background-color: transparent;
     width: 100%;
     height: 100%;
     display: flex;
@@ -186,54 +202,48 @@ header > .container nav.active button span:nth-child(3) {
     align-items: center;
   }
   header > .container nav ul li:hover {
-    background-color: #A7734A;
+    background-color: transparent;
+  }
+  header > .container nav ul li.selected {
+    background-color: transparent;
   }
   header > .container nav ul li a {
     color: #fff;
-    padding-inline: 4.375rem;
+    padding-inline: 0;
+    text-align: center;
+  }
+  header > .container nav ul li a:hover {
+    color: #A7734A;
   }
   header > .container nav.active ul {
-    transform: translateX(0);
-    right: 0;
-    top: 7.5rem;
-    width: 75%;
-    height: calc(100vh - 7.5rem);
+    transform: translateX(0%);
+    position: relative;
+    width: 100%;
+    top: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-    transition: transform 0.6s ease-in-out;
+    flex-direction: row;
+    height: auto;
+    gap: 1rem;
   }
   header > .container nav.active ul li {
-    background-color: #212121;
+    background-color: transparent;
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
   header > .container nav.active ul li:hover {
-    background-color: #A7734A;
-  }
-  header > .container nav.active ul li.selected {
-    background-color: #A7734A;
+    background-color: transparent;
   }
   header > .container nav.active ul li a {
     color: #fff;
+    padding-inline: 0;
   }
-  header > .container nav.active button span {
-    transition: all 0.6s;
-  }
-  header > .container nav.active button span:nth-child(2) {
-    width: 0;
-    opacity: 0;
-  }
-  header > .container nav.active button span:nth-child(1) {
-    transform: rotate(135deg) translate(15px, -1px);
-    background: #A7734A;
-  }
-  header > .container nav.active button span:nth-child(3) {
-    transform: rotate(-135deg) translate(13px, -2px);
+  header > .container nav.active ul li a:hover {
+    color: #A7734A;
   }
 }
 #expert {
@@ -346,6 +356,114 @@ header > .container nav.active button span:nth-child(3) {
     margin-bottom: 1.5rem;
   }
 }
+@media screen and (min-width: 1023px) {
+  #app main #div1 {
+    background-color: #212121;
+  }
+  #app main #div1 #expert {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  #app main #div1 #expert .container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  #app main #div1 #expert .container img {
+    width: 100%;
+    width: 580px;
+  }
+  #app main #div1 #expert .container .content {
+    padding: 1rem;
+    width: 100%;
+  }
+  #app main #div1 #expert .container .content h2 {
+    text-align: star;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  #app main #div1 #expert .container .content h1 {
+    text-align: start;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem 0;
+  }
+  #app main #div1 #expert .container .content p {
+    text-align: justify;
+  }
+  #app main #div1 #expert .container .content .hero {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0;
+    position: relative;
+  }
+  #app main #div1 #expert .container .content .hero .amendoa {
+    width: 4.375rem;
+    height: 4.375rem;
+    position: absolute;
+    display: block;
+    background-color: #A7734A;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+  }
+  #app main #div1 #expert .container .content .hero .contract {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: end;
+    width: 30%;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+  #app main #div1 #expert .container .content .hero .seta {
+    width: 50%;
+    position: absolute;
+    bottom: -20px;
+    right: 50px;
+    text-align: end;
+    font-size: 4.375rem;
+    color: #A7734A;
+  }
+  #app main #div1 #expert .container .content .contact-expert {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #app main #div1 #expert .container .content .contact-expert .seta {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: -80px;
+    text-align: end;
+    font-size: 4.375rem;
+    color: #A7734A;
+  }
+  #app main #div1 #expert .container .content .contact-expert div {
+    width: 100%;
+  }
+  #app main #div1 #expert .container .content .contact-expert div h3 {
+    margin: 1.25rem 0 0.5rem;
+    text-align: center;
+  }
+  #app main #div1 #expert .container .content .contact-expert div .email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  #app main #div1 #expert .container .content .contact-expert div ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
 #about {
   width: 100%;
   background-color: #191919;
@@ -432,6 +550,29 @@ header > .container nav.active button span:nth-child(3) {
     width: 95%;
   }
 }
+@media screen and (min-width: 1023px) {
+  #app main #div2 {
+    background-color: #191919;
+  }
+  #app main #div2 #about {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  #app main #div2 #about .container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+  #app main #div2 #about .container img {
+    width: 100%;
+    width: 580px;
+  }
+  #app main #div2 #about .container .content {
+    width: 60%;
+  }
+}
 #works {
   background-color: #212121;
   width: 100%;
@@ -513,6 +654,29 @@ header > .container nav.active button span:nth-child(3) {
     align-items: center;
   }
 }
+@media screen and (min-width: 1023px) {
+  #app main #div3 {
+    background-color: #212121;
+  }
+  #app main #div3 #works {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  #app main #div3 #works .container .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1.5rem;
+  }
+  #app main #div3 #works .container .cards .card {
+    width: 30%;
+  }
+  #app main #div3 #works .container .hero-works {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 #reviews {
   background-color: #0c0c0c;
 }
@@ -579,6 +743,16 @@ header > .container nav.active button span:nth-child(3) {
   text-align: center;
 }
 
+@media screen and (min-width: 1023px) {
+  #app main #div4 {
+    background-color: #0c0c0c;
+  }
+  #app main #div4 #reviews {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
 #contact {
   background-color: #191919;
   width: 100%;
@@ -611,6 +785,45 @@ header > .container nav.active button span:nth-child(3) {
   margin-bottom: 1rem;
 }
 
+@media screen and (min-width: 1023px) {
+  #app main #div5 {
+    background-color: #191919;
+  }
+  #app main #div5 #contact {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  #app main #div5 #contact .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  #app main #div5 #contact .container .flex-contact {
+    width: 50%;
+  }
+  #app main #div5 #contact .container h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: start;
+  }
+  #app main #div5 #contact .container .brand {
+    margin: 1rem 0;
+  }
+  #app main #div5 #contact .container .brand img {
+    width: 3.5rem;
+  }
+  #app main #div5 #contact .container p {
+    text-align: justify;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  #app main #div5 #contact .container span {
+    margin-bottom: 1rem;
+  }
+}
 footer {
   background-color: #000;
   display: flex;
@@ -645,6 +858,11 @@ footer .year {
 }
 
 @media screen and (min-width: 768px) {
+  #app main #contact {
+    padding-top: 1rem;
+  }
+}
+@media screen and (min-width: 1023px) {
   #app main #contact {
     padding-top: 1rem;
   }

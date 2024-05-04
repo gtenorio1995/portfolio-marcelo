@@ -54,3 +54,54 @@
         }
     }
 }
+
+// --------------------------------MEDIA QUERIES------------------------------//
+
+@media screen and (min-width: 1023px) {
+    #app {
+        main {
+            #div5 {
+                background-color: colors.$second-darken;
+                #contact {
+                    max-width: 1280px;
+                    width: 100%;
+                    margin: 0 auto;
+                    
+                    .container {
+                        @include f-center(space-between, center);
+                        flex-direction: row;
+                        .flex-contact{
+                            width: 50%;
+
+                            p{
+                            }
+                        }
+                
+                        h2 {
+                            @include text(24, 400);
+                            text-align: start;
+                        }
+                
+                        .brand {
+                            margin: converter(16) 0;
+                
+                            img {
+                                width: converter(56);
+                            }
+                        }
+                
+                        p {
+                            text-align: justify;
+                            @include text(16, 400);
+                            margin-bottom: converter(16);
+                        }
+                
+                        span {
+                            margin-bottom: converter(16);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
